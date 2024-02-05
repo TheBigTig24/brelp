@@ -1,0 +1,9 @@
+body {
+    margin: 0 auto;
+}
+
+.header-container {
+    width: 100vw;
+    height: 8vh;
+    background-image: linear-gradient(to right, green, lightgreen);
+}

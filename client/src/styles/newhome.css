@@ -1,0 +1,22 @@
+.slides-container {
+    width: 100vw;
+    height: 92vh;
+    overflow: hidden;
+}
+
+.slide1 {
+    max-height: 92vh;
+    background-color: red;
+}
+.slide2 {
+    max-height: 92vh;
+    background-color: lightblue;
+}
+.slide3 {
+    max-height: 92vh;
+    background-color: plum;
+}
+.slide4 {
+    max-height: 92vh;
+    background-color: lightseagreen;
+}
