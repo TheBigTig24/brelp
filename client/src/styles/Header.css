@@ -28,8 +28,9 @@ body {
 
 .menu-dropdown {
     /* the width is animated in js */
+    width: 0vw;
     height: 40vh;
-    z-index: 10;
+    z-index: 9;
     position: absolute;
     background-color: lightgray;
     overflow: hidden;
@@ -51,7 +52,7 @@ body {
     width: 100%;
     height: 33.2%;
     border: 0px;
-    font-size: 24px;
+    font-size: 1.2rem;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     overflow: hidden;
     white-space: nowrap;
@@ -67,7 +68,7 @@ body {
     border: 0px;
     margin-top: 1px;
     margin-bottom: 1px;
-    font-size: 24px;
+    font-size: 1.2rem;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-overflow: clip;
     white-space: nowrap;
@@ -91,7 +92,7 @@ body {
 /* PFP BUTTON */
 .pfp-btn {
     background: transparent;
-    width: 3%;
+    width: 3.3%;
     height: 75%;
     float: right;
     margin: 5px;
