@@ -1,26 +1,16 @@
-.login-panel {
+.left-panel {
     width: 50vw;
     height: 92vh;
     background-color: whitesmoke;
     float: left;
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.login-form-container {
+.form {
     width: 60%;
     height: 60%;
-    display: flex;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.form {
-    width: 100%;
-    height: 100%;
-    text-align: center;
 }
 
 #title {
@@ -28,37 +18,34 @@
     margin-bottom: 0;
 }
 
-#create-account-link {
+#link-back {
     font-size: .9rem;
+    margin-bottom: 0;
 }
 
 .text-box {
-    width: 60%;
-    height: 5%;
-    margin-bottom: 10px;
+    width: 55%;
+    margin-top: 10px;
 }
 
-.login-btn {
-    width: 62%;
-    height: 8%;
+.submit-btn {
     margin-top: 10px;
+    width: 57%;
+    height: 8%;
     background-color: goldenrod;
 }
 
-
-
-.img-panel {
+.right-panel {
     width: 50vw;
     height: 92vh;
     background-color: whitesmoke;
-    margin: 0;
     float: left;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.logo {
+.right-panel img {
     width: 50%;
     object-fit: contain;
 }

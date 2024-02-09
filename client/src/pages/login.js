@@ -10,9 +10,9 @@ function Login() {
             <div className='login-form-container'>
                 <form className='form'>
                     <p id='title'>Log In to Title</p>
-                    <p id='create-account-link'>New to Title? <a href=''>Sign Up</a></p>
-                    <input type='text' className='text-box' placeholder='Email'></input>
-                    <input type='text' className='text-box' placeholder='Password'></input>
+                    <p id='create-account-link'>New to Title? <a href='/create'>Sign Up</a></p>
+                    <input type='email' className='text-box' placeholder='Email'></input>
+                    <input type='password' className='text-box' placeholder='Password'></input>
                     <br/>
                     <button type='submit' className='login-btn'>Log In</button>
                 </form>
@@ -20,7 +20,7 @@ function Login() {
         </div>
 
         <div className='img-panel'>
-            <img src={logo} className='logo'></img>
+            <img src={logo} className='logo' alt=''></img>
         </div>
     
     </>)

@@ -6,6 +6,7 @@ import CreateReview from './pages/createreview'
 import NewHome from './pages/newhome'
 import Dashboard from './pages/dashboard'
 import Login from './pages/login'
+import CreateAcc from './pages/createAcc'
 
 function App() {
 
@@ -13,11 +14,12 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={ <FrontPage/> } />
-        <Route path="/createReview" element={ <CreateReview/> } />
+        <Route path="/oldCreateReview" element={ <CreateReview/> } />
 
-        <Route path="/newHome" element={ <NewHome/> } />
+        <Route path="/newHome" index element={ <NewHome/> } />
         <Route path="/dashboard" element={ <Dashboard/> } />
         <Route path="/login" element={ <Login/> } />
+        <Route path="/create" element={ <CreateAcc/> } />
       </Routes>
     </BrowserRouter>
   </>)

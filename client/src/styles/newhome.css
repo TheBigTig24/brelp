@@ -1,6 +1,6 @@
 .slides-container {
     width: 100vw;
-    height: 92vh;
+    height: 82vh;
     position: relative;
     overflow: hidden;
 }
@@ -58,4 +58,17 @@
     width: 100vw;
     height: 92vh;
     background-color: lightseagreen;
+}
+
+.under-slides-container {
+    margin:0 auto;
+    width: 100vw;
+    height: 55vh;
+    background: purple;
+    display: flex;
+    justify-content: center;
+}
+
+.under-slides-container h2 {
+    margin-bottom: 10px;
 }
