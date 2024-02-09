@@ -21,6 +21,10 @@ function Header() {
         }
     }
 
+    const pfpBtn = () => {
+        navigate("/login")
+    }
+
     const handle1 = () => {
         navigate("/dashboard")
     }
@@ -28,9 +32,9 @@ function Header() {
     return (<>
     <body>
         <div className="header-container">
-            <button className='menu-btn' onClick={pressed}><img src={ThreeBars} title='' className='threebars' alt ='' /></button>
+            <button className='menu-btn' onClick={pressed} ><img src={ThreeBars} title='' className='threebars' alt ='' /></button>
             
-            <button className='pfp-btn'><img src={ProfileIcon} className='pfp-icon' alt='' /></button>
+            <button className='pfp-btn' onClick={pfpBtn} ><img src={ProfileIcon} className='pfp-icon' alt='' /></button>
             <h2 className='site-name'>HEY</h2>
         </div>
         <div className='menu-dropdown' id='menu-dropdown'>
