@@ -50,7 +50,7 @@ function CreateAcc() {
     return(<>
         <Header/>
         <div className='left-panel'>
-            <form className='form' onSubmit={handleSubmit}>
+            <form className='form-2' onSubmit={handleSubmit}>
                 <p id='title'>Create Account</p>
                 <p id='link-back'>Already have an account? <a href='/login'>Log in here.</a></p>
                 <input type='email'  className='text-box' onChange={(e) => setEmail(e.target.value)} placeholder='Enter Email'></input><br/>

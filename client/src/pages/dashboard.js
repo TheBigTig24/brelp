@@ -2,15 +2,31 @@ import '../styles/dashboard.css'
 import Header from '../components/Header'
 import Magnifier from '../picfiles/Magnifier.png'
 import { useEffect, useState } from 'react'
+import axios from 'axios'
 
 function Dashboard() {
 
     const date = new Date();
     const time = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
 
+    const [email, setEmail] = useState('')
+    const [theId, setTheId] = useState()
+
     const [bsc, setBSC] = useState(false)
     const [cc, setCC] = useState(false)
     const [other, setOther] = useState(false)
+
+    useEffect(() => {
+        const id = localStorage.getItem('userId')
+        const url = "http://localhost:4000/users/bob?userId=" + id
+        axios.get(url)
+            .then((res) => {
+                setEmail(res.data[0].email)
+                setTheId(res.data[0].userId)
+            }).catch((error) => {
+                console.log(error)
+            })
+    }, [])
 
     const change = () => {
 
