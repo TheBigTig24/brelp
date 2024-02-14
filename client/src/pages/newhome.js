@@ -4,6 +4,7 @@ import '../styles/newhome.css'
 function NewHome() {
 
     return (<>
+    <body>
         <Header/>
         <div className='slides-container'>
             <div className='slide1'>
@@ -23,6 +24,7 @@ function NewHome() {
             <h2>About</h2><br/>
             <p>Some information that for some reason wont go the next line</p>
         </div>
+    </body>
     </>)
 }
 

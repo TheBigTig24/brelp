@@ -5,6 +5,10 @@
     overflow: hidden;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .slides-container > * {
     position: absolute;
     top: 0;

@@ -45,6 +45,10 @@
     align-items: center;
 }
 
+#not-matching {
+    color: red;
+}
+
 .right-panel img {
     width: 50%;
     object-fit: contain;
