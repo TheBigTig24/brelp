@@ -3,6 +3,7 @@ import '../styles/createacc.css'
 import Logo from '../picfiles/CPP-logo.png'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 function CreateAcc() {
 
@@ -10,6 +11,8 @@ function CreateAcc() {
     const [password1, setPassword1] = useState('')
     const [password2, setPassword2] = useState('')
     const [maxPassword, setMaxPassword] = useState();
+
+    const navigate = useNavigate()
 
     useEffect(() => {
         axios.get("http://localhost:4000/users/getLatestAccount/acc")
@@ -26,8 +29,8 @@ function CreateAcc() {
             document.getElementById('not-matching').innerHTML = "Passwords do not match"
         } else if ( (password1.length < 8) || (password2.length < 8) ) {
             document.getElementById('not-matching').innerHTML = "Password must be longer than 7 characters"
-        } else if ( (password1.search(/[~!@#$%^&*()_+-=`[\]{};':",.\/\<>?]/) < 0) ) {
-            console.log( "special" + password1.search(/[~!@#$%^&*()_+-=`[\]{};':",.\/\<>?]/) )
+        } else if ( (password1.search(/[~!@#$%^&*()_+\-=`[\]{};':",.\/\<>?]/) < 0) ) {
+            console.log( "special" + password1.search(/[~!@#$%^&*()_+\-=`[\]{};':",.\/\<>?]/) )
             document.getElementById('not-matching').innerHTML = "Password must contain a special character"
         } else if ( (password1.search(/[1234567890]/)) < 0 ) {
             console.log( "numba" + password1.search(/1234567890/) )
@@ -37,6 +40,7 @@ function CreateAcc() {
             axios.post("http://localhost:4000/users", { "userId": maxPassword + 1, "email": email, "password": password1 } )
                 .then((res) => {
                     console.log(res)
+                    navigate("/dashboard")
                 }).catch((error) => {
                     console.log(error)
                 })
