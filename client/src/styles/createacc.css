@@ -8,13 +8,14 @@
     align-items: center;
 }
 
-.form {
+.form-2 {
+    text-align: center;
     width: 60%;
     height: 60%;
 }
 
 #title {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 0;
 }
 
@@ -24,7 +25,7 @@
 }
 
 .text-box {
-    width: 55%;
+    width: 57%;
     margin-top: 10px;
 }
 
