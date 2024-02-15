@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom'
 function CreateAcc() {
 
     const [email, setEmail] = useState('')
+    const [username, setUsername] = useState('')
     const [password1, setPassword1] = useState('')
     const [password2, setPassword2] = useState('')
     const [maxPassword, setMaxPassword] = useState();
@@ -37,9 +38,9 @@ function CreateAcc() {
             document.getElementById('not-matching').innerHTML = "Password must contain a number"
         } else {
             document.getElementById('not-matching').innerHTML = "";
-            axios.post("http://localhost:4000/users", { "userId": maxPassword + 1, "email": email, "password": password1 } )
+            axios.post("http://localhost:4000/users", { "userId": maxPassword + 1, "username": username, "email": email, "password": password1 } )
                 .then((res) => {
-                    console.log(res)
+                    localStorage.setItem('userId', maxPassword + 1)
                     navigate("/dashboard")
                 }).catch((error) => {
                     console.log(error)
@@ -54,6 +55,7 @@ function CreateAcc() {
                 <p id='title'>Create Account</p>
                 <p id='link-back'>Already have an account? <a href='/login'>Log in here.</a></p>
                 <input type='email'  className='text-box' onChange={(e) => setEmail(e.target.value)} placeholder='Enter Email'></input><br/>
+                <input type='username' className='text-box' onChange={(e) => setUsername(e.target.value)} placeholder='Enter Name'></input><br/>
                 <input type='password' className='text-box' onChange={(e) => setPassword1(e.target.value)} placeholder='Enter Password'></input><br/>
                 <input type='password' className='text-box' onChange={(e) => setPassword2(e.target.value)} placeholder='Re Enter Password'></input><br/>
                 <p id='not-matching'></p>
