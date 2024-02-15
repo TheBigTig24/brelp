@@ -18,9 +18,9 @@ router.get('/:restaurantName', async (req, res) => {
 
 // add a new review to the db
 router.post('/', async (req, res) => {
-    const {restaurantName, reviewBody} = req.body
+    const {restaurantName, reviewTitle, reviewBody, userName, reviewRating} = req.body
     try {
-        const review1 = await ReviewObject.create({restaurantName, reviewBody})
+        const review1 = await ReviewObject.create({restaurantName, reviewTitle, reviewBody, userName, reviewRating})
         res.json(review1)
     } catch (error) {
         res.send("theres a fucking post error")
@@ -28,9 +28,9 @@ router.post('/', async (req, res) => {
 })
 
 //this is fucking useless
-router.delete('/', (req, res) => {
-    
-    res.json({mssg: 'DElete'})
+router.delete('/', async (req, res) => {
+    const review = await ReviewObject.deleteOne({})
+    res.send(review)
 })
 
 module.exports = router;

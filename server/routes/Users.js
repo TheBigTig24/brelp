@@ -28,13 +28,18 @@ router.get('/getLatestAccount/acc', async (req, res) => {
 })
 
 router.post('/', async (req, res) => {
-    const {userId, email, password} = req.body
+    const {userId, username, email, password} = req.body
     try {
-        const user = await UserObject.create({userId, email, password})
+        const user = await UserObject.create({userId, username, email, password})
         res.json(user)
     } catch (error) {
         res.send("failed to create user")
     }
+})
+
+router.delete('/', async (req, res) => {
+    const user = await UserObject.deleteOne({})
+    res.send(user)
 })
 
 

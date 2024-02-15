@@ -7,8 +7,20 @@ const reviewSchema = new Schema({
         type: String,
         required: true
     },
+    reviewTitle: {
+        type: String,
+        required: true
+    },
     reviewBody: {
         type: String,
+        required: true
+    },
+    userName: {
+        type: String,
+        required: true
+    },
+    reviewRating: {
+        type: Number,
         required: true
     }
 }, { timestamps: true })
