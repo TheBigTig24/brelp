@@ -33,6 +33,10 @@ function Header() {
         navigate("/newHome")
     }
 
+    const handle3 = () => {
+        navigate("/newReview")
+    }
+
     return (<>
     <body>
         <div className="header-container">
@@ -44,7 +48,7 @@ function Header() {
         <div className='menu-dropdown' id='menu-dropdown'>
             <button className='menu-dropdown-btn1' onClick={handle1}>Restaurants</button>
             <button className='menu-dropdown-btn2' onClick={handle2}>About</button>
-            <button className='menu-dropdown-btn1'>Write Review</button>
+            <button className='menu-dropdown-btn1' onClick={handle3}>Write Review</button>
         </div>
     </body>
         

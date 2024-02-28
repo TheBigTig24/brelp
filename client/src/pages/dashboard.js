@@ -11,6 +11,7 @@ function Dashboard() {
 
     const [email, setEmail] = useState('')
     const [theId, setTheId] = useState()
+    const [username, setUsername] = useState('Guest')
 
     const [bsc, setBSC] = useState(false)
     const [cc, setCC] = useState(false)
@@ -23,6 +24,7 @@ function Dashboard() {
             .then((res) => {
                 setEmail(res.data[0].email)
                 setTheId(res.data[0].userId)
+                setUsername(res.data[0].username)
             }).catch((error) => {
                 console.log(error)
             })
@@ -36,6 +38,7 @@ function Dashboard() {
         <Header />
         <div className='parent'>
             <div className='search-bar-container'>
+                <h1>Welcome, { username }</h1>
                 <form className='search-form'>
                     <input className='search-bar' type='text'></input>
                 </form>
