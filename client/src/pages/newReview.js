@@ -16,6 +16,8 @@ function NewReview() {
     const [theId, setTheId] = useState()
     const [username, setUsername] = useState('Guest')
 
+    const navigate = useNavigate()
+
     useEffect(() => {
         const id = localStorage.getItem('userId')
         const url = "http://localhost:4000/users/bob?userId=" + id
@@ -76,6 +78,7 @@ function NewReview() {
             axios.post("http://localhost:4000/reviews", { "restaurantName": restaurant, "reviewTitle": reviewTitle, "reviewBody": reviewText, "userName": username, "reviewRating": starRating })
                 .then((res) => {
                     console.log(res)
+                    navigate("/dashboard")
                 }).catch((error) => {
                     console.log(error)
                 })

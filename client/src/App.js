@@ -14,10 +14,8 @@ function App() {
   return (<>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={ <FrontPage/> } />
+        <Route path="/" element={ <NewHome/> } />
         <Route path="/oldCreateReview" element={ <CreateReview/> } />
-
-        <Route path="/newHome" index element={ <NewHome/> } />
         <Route path="/dashboard" element={ <Dashboard/> } />
         <Route path="/login" element={ <Login/> } />
         <Route path="/create" element={ <CreateAcc/> } />
