@@ -86,7 +86,8 @@ body {
     width: 100%;
     height: 100%;
     text-align: center;
-    margin: auto;
+    font-size: 1.8rem;
+    margin:  10px auto;
 }
 
 
@@ -104,4 +105,39 @@ body {
 .pfp-icon {
     width: 100%;
     height: 100%;
+}
+
+
+/* LOG OUT BUTTON*/
+.logout-dropdown {
+    width: 0vw;
+    height: 10vh;
+    position: absolute;
+    right: 0%;
+    z-index: 9;
+    background-color: lightgray;
+    overflow: hidden;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+}
+
+.logout-btn {
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    font-size: 1.2rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow: hidden;
+    text-decoration: underline;
+    white-space: nowrap;
+}
+
+@keyframes logout-visible {
+    from {width: 0vw;}
+    to {width: 11vw;}
+}
+
+@keyframes logout-invisible {
+    from {width: 11vw;}
+    to {width: 0vw;}
 }
