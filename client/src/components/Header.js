@@ -20,7 +20,7 @@ function Header() {
                 document.getElementById('logout-btn').innerHTML = "Log Out"
             }).catch((error) => {
                 //this part means that no user is logged in
-                console.log(error)
+                console.log("not logged in")
                 document.getElementById('logout-btn').innerHTML = "Sign In"
             })
     }, [])

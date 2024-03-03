@@ -20,9 +20,14 @@ function NewHome() {
 
             </div>
         </div>
-        <div className='under-slides-container'>
-            <h2>About</h2><br/>
-            <p>Some information that for some reason wont go the next line</p>
+        <div className='info-container'>
+            <div className='about'>
+                <h2>About</h2>
+                <p>This web application was made using React.js, Express.js, Node.js, and MongoDB by TheBigTig</p>
+            </div>
+        </div>
+        <div className='footer'>
+
         </div>
     </body>
     </>)

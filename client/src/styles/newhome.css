@@ -16,15 +16,6 @@ body {
     animation: 16s autoplay infinite ease-in-out;
 }
 
-/* not being used right now */
-@keyframes autoplay2 {
-    0% {top: 100%}
-    4% {top: 0%}
-    33.33% {top: 0%}
-    37.33% {top: -100%}
-    100% {top: -100%}
-}
-
 /* USED */
 @keyframes autoplay {
     0% {left: 100%}
@@ -64,15 +55,27 @@ body {
     background-color: lightseagreen;
 }
 
-.under-slides-container {
+.info-container {
     margin:0 auto;
     width: 100vw;
-    height: 55vh;
-    background: purple;
+    height: 25vh;
+    background: whitesmoke;
     display: flex;
     justify-content: center;
 }
 
-.under-slides-container h2 {
-    margin-bottom: 10px;
+.about {
+    text-align: center;
+
+}
+
+.about h2, p {
+    font-family: sans-serif;
+}
+
+.footer {
+    margin: 0 auto;
+    width: 100vw;
+    height: 5vh;
+    background: rgb(155, 155, 155);
 }
