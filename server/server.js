@@ -29,6 +29,9 @@ app.use("/reviews", reviewsRouter)
 const usersRouter = require('./routes/Users')
 app.use("/users", usersRouter)
 
+const restaurantsRouter = require('./routes/Restaurants')
+app.use("/restaurants", restaurantsRouter)
+
 
 // mongoose
 mongoose.connect(process.env.MONGO_URI)

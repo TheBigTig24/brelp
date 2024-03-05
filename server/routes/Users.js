@@ -10,7 +10,6 @@ router.get('/', async (req, res) => {
 router.get('/:userId', async (req, res) => {
     const id = req.query.userId
     const singleUser = await UserObject.find({userId: id})
-
     res.send(singleUser)
 })
 
