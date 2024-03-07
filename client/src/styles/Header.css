@@ -132,6 +132,25 @@ body {
     white-space: nowrap;
 }
 
+.logout-btn:hover {
+    background-color: rgb(216,211,211);
+}
+
+.admin-btn {
+    width: 100%;
+    height: 0%;
+    border: 0px;
+    font-size: 1.2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow: hidden;
+    text-decoration: underline;
+    white-space: nowrap;
+}
+
+.admin-btn:hover {
+    background-color: rgb(216,211,211);
+}
+
 @keyframes logout-visible {
     from {width: 0vw;}
     to {width: 11vw;}
@@ -141,3 +160,16 @@ body {
     from {width: 11vw;}
     to {width: 0vw;}
 }
+
+.admin-style {
+    width: 0vw;
+    height: 20vh;
+    position: absolute;
+    right: 0%;
+    z-index: 9;
+    background-color: lightgray;
+    overflow: hidden;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+}
+

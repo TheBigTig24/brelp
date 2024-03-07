@@ -1,3 +1,7 @@
+body {
+    overflow: hidden;
+}
+
 .login-panel {
     width: 50vw;
     height: 92vh;

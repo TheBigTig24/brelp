@@ -50,6 +50,7 @@ function CreateAcc() {
 
     return(<>
         <Header/>
+        <body>
         <div className='left-panel'>
             <form className='form-2' onSubmit={handleSubmit}>
                 <p id='title'>Create Account</p>
@@ -65,6 +66,7 @@ function CreateAcc() {
         <div className='right-panel'>
             <img src={Logo} alt=''></img>
         </div>
+        </body>
     </>)
 }
 

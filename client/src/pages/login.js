@@ -32,6 +32,7 @@ function Login() {
 
     return(<>
         <Header />
+        <body>
         <div className='login-panel'>
             <div className='login-form-container'>
                 <form className='form-1' onSubmit={handleSubmit}>
@@ -49,7 +50,7 @@ function Login() {
         <div className='img-panel'>
             <img src={logo} className='logo' alt=''></img>
         </div>
-    
+        </body>
     </>)
 }
 

@@ -8,6 +8,7 @@ import axios from 'axios'
 function Header() {
 
     const [id, setId] = useState(-1);
+    const [adminStatus, setAdminStatus] = useState(false);
 
     useEffect(() => {
         const tempId = localStorage.getItem('userId')
@@ -17,6 +18,9 @@ function Header() {
             .then((res) => {
                 const uID = res.data[0].userId
                 setId(uID)
+                if (uID == 4) {
+                    setAdminStatus(true)
+                }
                 document.getElementById('logout-btn').innerHTML = "Log Out"
             }).catch((error) => {
                 //this part means that no user is logged in
@@ -24,6 +28,17 @@ function Header() {
                 document.getElementById('logout-btn').innerHTML = "Sign In"
             })
     }, [])
+
+    useEffect(() => {
+        console.log(adminStatus)
+        if (adminStatus == true) {
+            document.getElementById('logout-dropdown').classList.add('admin-style')
+            document.getElementById('logout-btn').style.height = "49.9%"
+            document.getElementById('admin-btn').style.height = "49.9%"
+        } else {
+            document.getElementById('logout-dropdown').classList.add('logout-dropdown')
+        }
+    }, [adminStatus])
 
     const navigate = useNavigate();
 
@@ -77,6 +92,10 @@ function Header() {
         }
     }
 
+    const handle5 = () => {
+        navigate("/adminPage")
+    }
+
     return (<>
     <body>
         <div className="header-container">
@@ -92,6 +111,7 @@ function Header() {
         </div>
         <div className='logout-dropdown' id='logout-dropdown'>
             <button className='logout-btn' id='logout-btn' onClick={handle4}>Log Out</button>
+            <button className='admin-btn' id='admin-btn' onClick={handle5}>Admin Page</button>
         </div>
     </body>
         

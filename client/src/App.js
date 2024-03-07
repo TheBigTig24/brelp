@@ -8,6 +8,7 @@ import Dashboard from './pages/dashboard'
 import Login from './pages/login'
 import CreateAcc from './pages/createAcc'
 import NewReview from './pages/newReview'
+import Admin from './pages/admin'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/login" element={ <Login/> } />
         <Route path="/create" element={ <CreateAcc/> } />
         <Route path="/newReview" element={ <NewReview/> } />
+        <Route path="/adminPage" element={ <Admin/> } />
       </Routes>
     </BrowserRouter>
   </>)
