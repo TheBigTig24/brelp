@@ -21,6 +21,12 @@ router.get('/user/:email', async (req, res) => {
 
 })
 
+router.get('/justEmail/:email', async (req, res) => {
+    const email = req.query.email
+    const singleUser = await UserObject.find({email: email})
+    res.send(singleUser)
+})
+
 router.get('/getLatestAccount/acc', async (req, res) => {
     const time = await UserObject.find().sort({ userId: -1})
     res.send(time[0])
@@ -41,5 +47,13 @@ router.delete('/', async (req, res) => {
     res.send(user)
 })
 
+router.delete('/deleteById/:userId', async (req, res) => {
+    const queryId = req.query.userId
+    if (queryId == 4) {
+        res.send("cannot delete admin")
+    }
+    const user = await UserObject.findOneAndDelete({userId: queryId})
+    res.send(user)
+})
 
 module.exports = router;

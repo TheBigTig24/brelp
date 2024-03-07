@@ -28,7 +28,8 @@ router.post('/', async (req, res) => {
 
 // DELETE a restaurant just cuz
 router.delete('/', async (req, res) => {
-    const restaurant = await RestaurantObject.deleteOne({})
+    const name = req.body.restName
+    const restaurant = await RestaurantObject.deleteOne({restName: name})
     res.send(restaurant)
 })
 
